@@ -1,0 +1,46 @@
+{
+    "__class__": "<class 'agents.ppo_barrier.PPOBarrierAgent'>",
+    "optimizer":{
+        "type": "ADAM",
+        "lr": 0.0003,
+        "weight_decay": 0
+    },
+    "common": null,
+    "actor": {
+        "type": "MultiLayerPerceptron",
+        "layers": [128, 128],
+        "reshape": true,
+        "in": null,
+        "out": null
+    },
+    "critic": {
+        "type": "MultiLayerPerceptron",
+        "layers": [128, 128],
+        "reshape": true,
+        "in": null,
+        "out": 1
+    },
+    "barrier": {
+        "type": "MultiLayerPerceptron",
+        "layers": [128, 128],
+        "reshape": true,
+        "in": null,
+        "out": 1
+    },
+    "gamma": 0.99,
+    "batch_size": 32,
+    "lambd": 0.97,
+    "clip_rate": 0.2,
+    "K_epochs": 10,
+    "T_horizon": 128,
+    "entropy_coef": 0.01,
+    "adv_normalization": true,
+    "entropy_coef_decay": 0.99,
+    "penalty_lr": 0.001,
+    "penalty_init": 1.0,
+    "penalty_margin_normalization": true,
+    "num_barrier_step": 5,
+    "epsilon": 0.1,
+    "barrier_lambda": 0.5,
+    "penalty_margin_clip": 0.001
+}

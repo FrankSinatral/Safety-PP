@@ -1,0 +1,13 @@
+seed: 10
+
+env: 'circle'
+result_path: 'results'
+tb_logs: 'results'
+algo: 'priorrewsdqn'
+hidden_dim: 256
+eval_freq: 4000
+eval_times: 50
+save_freq: 200000
+total_steps: 1000 # k
+use_tb: True
+enable_test: False

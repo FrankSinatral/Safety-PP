@@ -1,0 +1,24 @@
+{
+    "__class__": "<class 'agents.dqn.DQNAgent'>",
+    "optimizer": {
+        "type": "ADAM",
+        "lr": 0.0005,
+        "weight_decay": 0
+    },
+    "model": {
+        "type": "MultiLayerPerceptron",
+        "layers": [128, 128],
+        "reshape": true,
+        "in": null,
+        "out": null
+    },
+    "gamma": 0.99,
+    "n_steps": 1,
+    "batch_size": 64,
+    "memory_capacity": 15000,
+    "target_update": 512,
+    "eps_start": 1.0,
+    "eps_decay": 0.995,
+    "eps_min": 0.01,
+    "double": true
+}

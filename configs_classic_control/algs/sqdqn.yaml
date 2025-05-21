@@ -1,0 +1,20 @@
+tau: 0.005
+gamma: 0.99
+lr: 0.0005
+phi_lr: 0.0005
+n_updates: 1
+update_every: 1
+batch_size: 64
+clip_grad: 1.0
+buffer_size: 100000
+
+eps_start: 1.0
+eps_decay: 0.995
+eps_min: 0.01
+hard_update_step: -1
+
+double: True
+p_weight_a: 1.0
+crisp_threshold: 0.1
+mask_for_target: True
+safe_mix: 0.05

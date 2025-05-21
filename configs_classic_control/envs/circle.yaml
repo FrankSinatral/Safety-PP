@@ -1,0 +1,10 @@
+m: 1
+R: 5
+v_max: 2
+a_const: 1
+x_max: 2.5
+y_max: 10
+delta_t: 0.1
+ep_len: 100
+penalty: -10 # original: -1
+terminate_if_crash: True

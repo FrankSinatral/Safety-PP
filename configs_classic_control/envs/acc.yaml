@@ -1,0 +1,5 @@
+ep_len: 100
+mu: 0
+sigma: 0.2
+penalty: 0
+delta_t: 1

@@ -1,0 +1,29 @@
+tau: 0.005
+gamma: 0.99
+lr: 0.000125 # original: 0.000125
+phi_lr: 0.0005 # original: 0.000125
+n_updates: 1
+update_every: 1
+batch_size: 64
+clip_grad: 1.0
+buffer_size: 100000
+
+start_learning: 64
+
+eps_start: 1.0
+eps_decay: 0.995
+eps_min: 0.01
+hard_update_step: -1
+
+double: True
+double_phi: True
+p_weight_a: 1
+xp_order: 1
+use_log: False
+use_min: True
+crisp: False
+crisp_threshold: 0.1
+
+alpha: 0.6 # original: 0.7
+beta: 0.4
+phi_weighted_q: true

@@ -1,0 +1,51 @@
+{
+    "__class__": "<class 'agents.sac_double.SACDoubleAgent'>",
+    "optimizer":{
+        "type": "ADAM",
+        "lr": 0.0003,
+        "weight_decay": 0
+    },
+    "common": {
+        "type": "EgoAttentionNetwork",
+        "embedding_layer": {
+            "type": "MultiLayerPerceptron",
+            "layers": [64, 64],
+            "reshape": false,
+            "in": 7
+        },
+        "others_embedding_layer": {
+            "type": "MultiLayerPerceptron",
+            "layers": [64, 64],
+            "reshape": false,
+            "in": 7
+        },
+        "self_attention_layer": null,
+        "attention_layer": {
+            "type": "EgoAttention",
+            "feature_size": 64,
+            "heads": 2,
+            "k_attn": -1
+        },
+        "output_layer": null,
+        "in": null,
+        "out": 64
+    },
+    "actor": {
+        "type": "MultiLayerPerceptron",
+        "layers": [64, 64],
+        "reshape": false,
+        "in": 64,
+        "out": null
+    },
+    "critic": {
+        "type": "MultiLayerPerceptron",
+        "layers": [64, 64],
+        "reshape": false,
+        "in": 64,
+        "out": null
+    },
+    "gamma": 0.99,
+    "batch_size": 64,
+    "memory_capacity": 15000,
+    "target_update": 512
+}

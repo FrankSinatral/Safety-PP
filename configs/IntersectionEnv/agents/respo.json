@@ -1,0 +1,94 @@
+{
+    "__class__": "<class 'agents.respo.RESPOAgent'>",
+    "optimizer":{
+        "type": "ADAM",
+        "lr": 0.0003,
+        "weight_decay": 0
+    },
+    "common": {
+        "type": "EgoAttentionNetwork",
+        "embedding_layer": {
+            "type": "MultiLayerPerceptron",
+            "layers": [64, 64],
+            "reshape": false,
+            "in": 7
+        },
+        "others_embedding_layer": {
+            "type": "MultiLayerPerceptron",
+            "layers": [64, 64],
+            "reshape": false,
+            "in": 7
+        },
+        "self_attention_layer": null,
+        "attention_layer": {
+            "type": "EgoAttention",
+            "feature_size": 64,
+            "heads": 2,
+            "k_attn": -1
+        },
+        "output_layer": null,
+        "in": null,
+        "out": 64
+    },
+    "actor": {
+        "type": "MultiLayerPerceptron",
+        "layers": [64, 64],
+        "reshape": false,
+        "in": 64,
+        "out": null
+    },
+    "critic": {
+        "type": "MultiLayerPerceptron",
+        "layers": [64, 64],
+        "reshape": false,
+        "in": 64,
+        "out": 1
+    },
+    "cost_critic": {
+        "type": "MultiLayerPerceptron",
+        "layers": [64, 64],
+        "reshape": false,
+        "in": 64,
+        "out": 1
+    },
+    "vp": {
+        "type": "EgoAttentionNetwork",
+        "embedding_layer": {
+            "type": "MultiLayerPerceptron",
+            "layers": [64, 64],
+            "reshape": false,
+            "in": 7
+        },
+        "others_embedding_layer": {
+            "type": "MultiLayerPerceptron",
+            "layers": [64, 64],
+            "reshape": false,
+            "in": 7
+        },
+        "self_attention_layer": null,
+        "attention_layer": {
+            "type": "EgoAttention",
+            "feature_size": 64,
+            "heads": 2,
+            "k_attn": -1
+        },
+        "output_layer": {
+            "type": "MultiLayerPerceptron",
+            "layers": [64, 64],
+            "reshape": false
+        },
+        "out": 1
+    },
+    "gamma": 0.99,
+    "batch_size": 32,
+    "lambd": 0.97,
+    "clip_rate": 0.2,
+    "K_epochs": 10,
+    "T_horizon": 128,
+    "entropy_coef": 0.01,
+    "adv_normalization": true,
+    "entropy_coef_decay": 0.99,
+    "penalty_lr": 0.00005,
+    "penalty_init": 0.25,
+    "vp_lr": 0.0001
+}

@@ -1,0 +1,18 @@
+tau: 0.005
+gamma: 0.99
+lr: 0.000125
+n_updates: 1
+update_every: 1
+batch_size: 64
+clip_grad: 1.0
+buffer_size: 100000
+
+eps_start: 1.0
+eps_decay: 0.995
+eps_min: 0.01
+
+double: True
+hard_update_step: -1
+
+alpha: 0.6
+beta: 0.4

@@ -1,0 +1,27 @@
+
+x_range: 1
+y_range: 1
+
+x_init_low: -0.9
+x_init_high: -0.5
+y_init_low: -0.3
+y_init_high: 0.3
+
+init_r: 0.5
+margin: 0.05
+
+ob_radius: 0.3
+ob_x: 0. #-0.2
+ob_y: 0.
+x_goal_pos: 0.6
+y_goal_pos: 0
+
+v_max: 1
+a_const: 1
+delta_t: 0.05
+
+
+penalty: -1 # -10
+add_term: 1 # old: 1
+ep_len: 100
+
