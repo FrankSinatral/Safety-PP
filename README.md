@@ -11,6 +11,9 @@ The framework supports the following four autonomous driving tasks from the [Hig
 2. Roundabout
 3. Merge
 4. TwoWay
+and two classic control tasks:
+1. Circle
+2. Acc
 
 ## 🚀Running codes
 To launch **SPOM_PER** on the Merge environment for a total of 1e5 steps, run:
